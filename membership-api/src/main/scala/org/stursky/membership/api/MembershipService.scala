@@ -11,4 +11,6 @@ trait MembershipService extends Service {
       pathCall("/membership/get", getMembership)
     ).withAutoAcl(true)
   }
+
+
 }

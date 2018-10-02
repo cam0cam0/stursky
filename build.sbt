@@ -9,7 +9,7 @@ val scalaTest = "org.scalatest" %% "scalatest" % "3.0.4" % Test
 
 lazy val `hello` = (project in file("."))
   .aggregate(`hello-api`, `hello-impl`, `hello-stream-api`, `hello-stream-impl`, `membership-api`,
-    `membership-impl`)
+    `membership-impl`, `consumer-api`, `consumer-impl`, `trip-api`, `trip-impl`)
 
 lazy val `hello-api` = (project in file("hello-api"))
   .settings(
@@ -69,4 +69,40 @@ lazy val `membership-impl` = (project in file("membership-impl"))
   .settings(lagomForkedTestSettings: _*)
   .dependsOn(`membership-api`)
 
+lazy val `consumer-api` = (project in file("consumer-api"))
+  .settings(
+    libraryDependencies ++= Seq(
+      lagomScaladslApi
+    )
+  )
+lazy val `consumer-impl` = (project in file("consumer-impl"))
+  .enablePlugins(LagomScala)
+  .settings(
+    libraryDependencies ++= Seq(
+      lagomScaladslPersistenceCassandra,
+      lagomScaladslTestKit,
+      macwire,
+      scalaTest
+    )
+  )
+  .settings(lagomForkedTestSettings: _*)
+  .dependsOn(`consumer-api`, `membership-api`)
 
+lazy val `trip-api` = (project in file("trip-api"))
+  .settings(
+    libraryDependencies ++= Seq(
+      lagomScaladslApi
+    )
+  )
+lazy val `trip-impl` = (project in file("trip-impl"))
+  .enablePlugins(LagomScala)
+  .settings(
+    libraryDependencies ++= Seq(
+      lagomScaladslPersistenceCassandra,
+      lagomScaladslTestKit,
+      macwire,
+      scalaTest
+    )
+  )
+  .settings(lagomForkedTestSettings: _*)
+  .dependsOn(`trip-api`)

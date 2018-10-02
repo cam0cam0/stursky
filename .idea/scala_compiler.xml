@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="lagom-scala-sbt_3418,hello,membership-api,hello-api,membership-impl,hello-impl,hello-stream-api,hello-stream-impl" />
+    <profile name="sbt 1" modules="lagom-scala-sbt_3418,trip-impl,consumer-impl,hello-impl,membership-impl,hello-stream-api,hello-stream-impl,consumer-api,hello,membership-api,trip-api,hello-api" />
   </component>
 </project>

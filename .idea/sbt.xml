@@ -8,6 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/consumer-api" />
+            <option value="$PROJECT_DIR$/consumer-api/project" />
+            <option value="$PROJECT_DIR$/consumer-impl" />
+            <option value="$PROJECT_DIR$/consumer-impl/project" />
             <option value="$PROJECT_DIR$/hello-api" />
             <option value="$PROJECT_DIR$/hello-api/project" />
             <option value="$PROJECT_DIR$/hello-impl" />
@@ -21,10 +25,15 @@
             <option value="$PROJECT_DIR$/membership-impl" />
             <option value="$PROJECT_DIR$/membership-impl/project" />
             <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/trip-api" />
+            <option value="$PROJECT_DIR$/trip-api/project" />
+            <option value="$PROJECT_DIR$/trip-impl" />
+            <option value="$PROJECT_DIR$/trip-impl/project" />
           </set>
         </option>
         <option name="resolveSbtClassifiers" value="true" />
         <option name="sbtVersion" value="1.2.1" />
+        <option name="useAutoImport" value="true" />
       </SbtProjectSettings>
     </option>
   </component>
